@@ -17,4 +17,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://satyamg1620:$HF_TOKEN@huggingface.co/spaces/satyamg1620/PCA-Image-Reconstruction main
+        run: git push --force https://satyamg1620:$HF_TOKEN@huggingface.co/spaces/satyamg1620/PCA-Image-Reconstruction main
