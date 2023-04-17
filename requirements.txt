@@ -2,8 +2,6 @@ streamlit
 numpy
 Pillow
 imageio
-io
 requests
 pandas
 matplotlib
-os
