@@ -78,7 +78,7 @@ file = st.file_uploader("Upload an image", type=["png", "jpg"])
 cont = st.empty()
 if not file:
 	# cont.info(f"Please Upload an image :{' '.join(['png', 'jpg'])}")
-	url = 'https://images.hindustantimes.com/img/2022/07/06/1600x900/dhoni-2016-getty_1654515327472_1657137509048.jpg'
+	url = 'https://themayanagari.com/wp-content/uploads/2020/10/ms-dhoni-png-image-free-download.jpg'
 	data = requests.get(url)
 	file = BytesIO(data.content)
 
