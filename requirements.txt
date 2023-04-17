@@ -1,7 +1,7 @@
 streamlit
 numpy
 Pillow
-imageio.v2
+imageio
 io
 requests
 pandas
