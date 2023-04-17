@@ -1,7 +1,6 @@
 streamlit
 numpy
 Pillow
-PIL
 imageio.v2
 io
 requests
