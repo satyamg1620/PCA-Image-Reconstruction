@@ -78,7 +78,7 @@ file = st.file_uploader("Upload an image", type=["png", "jpg"])
 cont = st.empty()
 if not file:
 	# cont.info(f"Please Upload an image :{' '.join(['png', 'jpg'])}")
-	url = 'https://themayanagari.com/wp-content/uploads/2020/10/ms-dhoni-png-image-free-download.jpg'
+	url = 'https://topofthelist.net/wp-content/uploads/2016/01/Hydrangeas.jpg'
 	data = requests.get(url)
 	file = BytesIO(data.content)
 
