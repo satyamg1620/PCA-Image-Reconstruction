@@ -124,12 +124,15 @@ with st.spinner('LOADING'):
     recon_color_img = Image.fromarray(recon_color_img)
 
     col2 = st.empty()
-    recon_color_img = recon_color_img.resize((400, 400))
-    new_image = in_image.resize((400, 400))
+    recon_color_img = recon_color_img.resize((450, 450))
+    new_image = in_image.resize((450, 450))
     n_components = [i for i in range(1, max_comp+1, 20)] 
     plt.plot(n_components, loss_r, 'r')
     plt.plot(n_components, loss_g, 'g')
     plt.plot(n_components, loss_b, 'b')
+    plt.xlabel('Number of Principal Components')
+    plt.ylabel('Loss (MSE)')
+    plt.title('Loss (MSE) VS Number of Principal Components')
     # fig = plt.figure()
     plt.legend(['Red Channel', 'Green Channel', 'Blue Channel'])
 
@@ -137,10 +140,21 @@ with st.spinner('LOADING'):
     plt.savefig(img_buf, format='png')
 
     im = Image.open(img_buf)
-    im = im.resize((400, 400))
+    im = im.resize((450, 450))
     with st.container():
         st.write(f'Total Principal Components : {min(img_array.shape[0], img_array.shape[1])}')
-
+        # col1, col2 = st.columns(2)
+        # col1 = cont
         caption_li=['Original Image','All three channels Reconstruction Loss' ,f'Resultant Image with {no_of_comp} components']
         images = [new_image, im ,recon_color_img]
         st.image(images, caption=caption_li, width=400)
+        # with col1:
+        #     col1.image(new_image, caption='Original Image')
+        # with col2:
+        #     col2.image(recon_color_img, caption="Resultant Image")
+
+
+
+
+	
+	
