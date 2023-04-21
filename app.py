@@ -108,8 +108,8 @@ a_b = a_np[:,:,2]
 p_r, cov_mat_r, eig_vec_r, loss_r = decomp(img_array, a_r)
 p_g, cov_mat_g, eig_vec_g, loss_g  = decomp(img_array, a_g)
 p_b, cov_mat_b, eig_vec_b, loss_b  = decomp(img_array, a_b)
-with st.sidebar:
-    slider_comp = st.slider('Slide over to change number of componenets', 0, max_comp, 0)
+# with st.sidebar:
+slider_comp = st.slider('Slide over to change number of componenets', 0, max_comp, 0)
             
 with st.spinner('LOADING'): 
 
@@ -142,8 +142,8 @@ with st.spinner('LOADING'):
         st.write(f'Total Principal Components : {min(img_array.shape[0], img_array.shape[1])}')
         # col1, col2 = st.columns(2)
         # col1 = cont
-        caption_li=['Original Image' ,'All three channels loss',f'Resultant Image with {no_of_comp} components']
-        images = [new_image ,im,recon_color_img]
+        caption_li=['Original Image','All three channels Reconstruction Loss' ,f'Resultant Image with {no_of_comp} components']
+        images = [new_image, im ,recon_color_img]
         st.image(images, caption=caption_li, width=400)
         # with col1:
         #     col1.image(new_image, caption='Original Image')
