@@ -89,7 +89,7 @@ file = st.file_uploader("Upload an image", type=["png", "jpg"])
 cont = st.empty()
 if not file:
 	# cont.info(f"Please Upload an image :{' '.join(['png', 'jpg'])}")
-	url = 'https://topofthelist.net/wp-content/uploads/2016/01/Hydrangeas.jpg'
+	url = 'https://raw.githubusercontent.com/satyamg1620/Prerequsite_test_22210041/main/947_2000.jpg'
 	data = requests.get(url)
 	file = BytesIO(data.content)
 
@@ -140,12 +140,7 @@ with st.spinner('LOADING'):
     im = im.resize((400, 400))
     with st.container():
         st.write(f'Total Principal Components : {min(img_array.shape[0], img_array.shape[1])}')
-        # col1, col2 = st.columns(2)
-        # col1 = cont
+
         caption_li=['Original Image','All three channels Reconstruction Loss' ,f'Resultant Image with {no_of_comp} components']
         images = [new_image, im ,recon_color_img]
         st.image(images, caption=caption_li, width=400)
-        # with col1:
-        #     col1.image(new_image, caption='Original Image')
-        # with col2:
-        #     col2.image(recon_color_img, caption="Resultant Image")
