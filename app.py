@@ -141,8 +141,8 @@ with st.spinner('LOADING'):
     im = Image.open(img_buf)
     im = im.resize((450, 450))
     with st.container():
-        st.write(f'Total Principal Components : {min(img_array.shape[0], img_array.shape[1])}')
-        st.write(f'Compression Ratio: {100*(reduced_size_r+reduced_size_g+reduced_size_b)/(orig_size_r+orig_size_g+orig_size_b)}')
+        st.write(f'Total No. of Principal Components : {min(img_array.shape[0], img_array.shape[1])}')
+        #st.write(f'Compression Ratio: {100*(reduced_size_r+reduced_size_g+reduced_size_b)/(orig_size_r+orig_size_g+orig_size_b)}')
         caption_li=['Original Image','All three channels Reconstruction Loss' ,f'Reconstructed Image with {no_of_comp} components']
         images = [new_image, im ,recon_color_img]
         st.image(images, caption=caption_li, width=400)
