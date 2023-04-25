@@ -141,8 +141,22 @@ with st.spinner('LOADING'):
     im = Image.open(img_buf)
     im = im.resize((450, 450))
     with st.container():
-        st.write(f'Total No. of Principal Components : {min(img_array.shape[0], img_array.shape[1])}')
-        #st.write(f'Compression Ratio: {100*(reduced_size_r+reduced_size_g+reduced_size_b)/(orig_size_r+orig_size_g+orig_size_b)}')
+        st.write(f'Total Principal Components : {min(img_array.shape[0], img_array.shape[1])}')
+        st.write(f'Compression Ratio: {100*(reduced_size_r+reduced_size_g+reduced_size_b)/(orig_size_r+orig_size_g+orig_size_b)}')
         caption_li=['Original Image','All three channels Reconstruction Loss' ,f'Reconstructed Image with {no_of_comp} components']
         images = [new_image, im ,recon_color_img]
         st.image(images, caption=caption_li, width=400)
+
+
+st.markdown('''Principal component analysis, or PCA, is a dimensionality reduction method that is often 
+                used to reduce the dimensionality of large data sets, by transforming a large set of variables 
+                into a smaller one that still contains most of the information in the large set.
+                We can use PCA for dimensionality reduction for images as well.''')
+
+st.markdown('''In this aplication, we are using PCA dimensionality reduction for Image Reconstruction. We can upload an image, the application will first split 
+            the image into the three channels (Blue, Green, and Red) first and then and perform PCA separately on each dataset representing each channel and 
+            calculate total number of Principal Components of that image. After calculating the number of components, a slider will be shown with a range 
+            from 0 to maximum number of principal components of that image.
+            We can use the slider increase or decrease the number of components for generating the Reconstructed Image. Additionaly the appication will also show the plot of 
+            Loss VS Principal Number of components for each channel i.e Red, Green and Blue 
+             ''')
