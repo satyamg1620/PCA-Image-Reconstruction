@@ -5,3 +5,4 @@ imageio
 requests
 pandas
 matplotlib
+altair==4.0
