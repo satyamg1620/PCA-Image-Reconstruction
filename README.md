@@ -13,3 +13,4 @@ pinned: false
 # PCA-Image-Reconstruction
 
 For Streamlit Web app
+Hugging Face [Link](https://huggingface.co/spaces/satyamg1620/PCA-Image-Reconstruction).
