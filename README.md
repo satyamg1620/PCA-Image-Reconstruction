@@ -1,5 +1,5 @@
 ---
-title: PCA Image Reconstruction
+title: PCA(Principal Component Analysis) Image Reconstruction
 emoji: 🔥
 colorFrom: purple
 colorTo: indigo
